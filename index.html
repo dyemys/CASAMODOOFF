@@ -70,17 +70,18 @@
 
 <script type="text/javascript">
 function reqserver(url){
-event.preventDefault();
-fetch(url, {
-	mode:"no-cors"
-	})
-	.then((response) => response.json())
-	.then((data) => {
-		console.log("Success:", data);
-	})
-	.catch((error) => {
-		console.error("Error:", error);
-	});
-}
+	event.preventDefault();
+	fetch(url, {
+		mode:"no-cors",
+		cache: "no-cache",
+		})
+		.then((response) => response.json())
+		.then((data) => {
+			console.log("Success:", data);
+		})
+		.catch((error) => {
+			console.error("Error:", error);
+		});
+};
 </script>
 </center></html>

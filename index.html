@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html><center>
 <head
-<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-</meta></head>
+<meta 
+	http-equiv="Content-Security-Policy"
+	content="upgrade-insecure-requests"/>
+</head>
 <style>
 .button {
   background-color: #3630a3;
@@ -15,8 +17,8 @@
   margin: 5px 5px;
   cursor: pointer;
   font-size: 20px;
-  height: 200px;
-  width: 200px;
+  height: 500px;
+  width: 500px;
   border-radius: 50px;
   white-space: normal !important;
 }
@@ -34,46 +36,47 @@
 </style>
 <table><tbody><tr><td>
 <form>
-	<button class="button" onclick="reqserver('http://181.223.183.96/QUARTINHO')">QUARTINHO
-	<img src="https://cdn-icons-png.flaticon.com/512/2103/2103715.png"  style="max-widht:100px; max-height:100px;">
+	<button class="button" onclick="reqserver('/QUARTINHO')">QUARTINHO
+	<img src="https://cdn-icons-png.flaticon.com/512/2103/2103715.png"  style="max-widht:400px; max-height:400px;">
 	</button>
 </form>
 </td><td>
 <form>
-	<button class="button" onclick="reqserver('http://192.168.0.21/QUARTO')">QUARTO
-	<img src="https://cdn-icons-png.flaticon.com/512/452/452811.png"  style="max-widht:100px; max-height:100px;">
+	<button class="button" onclick="reqserver('/QUARTO')">QUARTO
+	<img src="https://cdn-icons-png.flaticon.com/512/452/452811.png"  style="max-widht:400px; max-height:400px;">
 	</button>
 </form>
 </td></tr><tr><td>
 <form>
-  <button class="button" onclick="reqserver('http://192.168.0.21/SALA')">SALA
-  <img src="https://cdn-icons-png.flaticon.com/512/1904/1904925.png"  style="max-widht:100px; max-height:100px;">
+  <button class="button" onclick="reqserver('/SALA')">SALA
+  <img src="https://cdn-icons-png.flaticon.com/512/1904/1904925.png"  style="max-widht:400px; max-height:400px;">
   </button>
 </form>
 </td><td>
 <form>
-  <button class="button" onclick="reqserver('http://192.168.0.21/COPA')">COPA
-  <img src="https://cdn-icons-png.flaticon.com/512/5619/5619891.png"  style="max-widht:100px; max-height:100px;">
+  <button class="button" onclick="reqserver('/COPA')">COPA
+  <img src="https://cdn-icons-png.flaticon.com/512/5619/5619891.png"  style="max-widht:400px; max-height:400px;">
   </button>
 </form>
 </td></tr><tr><td>
 <form>
-  <button class="button" onclick="reqserver('http://192.168.0.21/GARAGEM')">GARAGEM
-  <img vertical-align="top" src="https://cdn-icons-png.flaticon.com/512/2422/2422716.png"  style="max-widht:100px; max-height:100px;">
+  <button class="button" onclick="reqserver('/GARAGEM')">GARAGEM
+  <img vertical-align="top" src="https://cdn-icons-png.flaticon.com/512/2422/2422716.png"  style="max-widht:400px; max-height:400px;">
   </button>
 </form>
 </td><td>
 <form>
-  <button class="button" onclick="reqserver('http://192.168.0.21/APAGAO')">APAGAO
-  <img src="https://cdn-icons-png.flaticon.com/512/3596/3596172.png"  style="max-widht:100px; max-height:100px;">
+  <button class="button" onclick="reqserver('/APAGAO')">APAGAO
+  <img src="https://cdn-icons-png.flaticon.com/512/3596/3596172.png"  style="max-widht:400px; max-height:400px;">
   </button>
 </form>
 </td></tr></tbody></table>
 
 <script type="text/javascript">
+const ip="https://181.223.183.96"
 function reqserver(url){
 	event.preventDefault();
-	fetch(url, {
+	fetch(ip + url, {
 		mode:"no-cors",
 		cache: "no-cache",
 		})

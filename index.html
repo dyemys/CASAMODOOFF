@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html><center>
+<head>
+<style>
+.button {
+  background-color: #3630a3;
+  border: 5px solid #000000;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 5px 5px;
+  cursor: pointer;
+  font-size: 20px;
+  height: 500px;
+  width: 500px;
+  border-radius: 50px;
+  white-space: normal !important;
+}
+.button:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+.button:active {
+  color: black;
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(5px);
+  transform: translateX(2px);
+}
+</style>
+<table><tbody><tr><td>
+<form>
+	<button class="button" onclick="reqserver('http://192.168.0.21/QUARTINHO')">QUARTINHO
+	<img src="https://cdn-icons-png.flaticon.com/512/2103/2103715.png"  style="max-widht:400px; max-height:400px;">
+	</button>
+</form>
+</td><td>
+<form>
+	<button class="button" onclick="reqserver('http://192.168.0.21/QUARTO')">QUARTO
+	<img src="https://cdn-icons-png.flaticon.com/512/452/452811.png"  style="max-widht:400px; max-height:400px;">
+	</button>
+</form>
+</td></tr><tr><td>
+<form>
+  <button class="button" onclick="reqserver('http://192.168.0.21/SALA')">SALA
+  <img src="https://cdn-icons-png.flaticon.com/512/1904/1904925.png"  style="max-widht:400px; max-height:400px;">
+  </button>
+</form>
+</td><td>
+<form>
+  <button class="button" onclick="reqserver('http://192.168.0.21/COPA')">COPA
+  <img src="https://cdn-icons-png.flaticon.com/512/5619/5619891.png"  style="max-widht:400px; max-height:400px;">
+  </button>
+</form>
+</td></tr><tr><td>
+<form>
+  <button class="button" onclick="reqserver('http://192.168.0.21/GARAGEM')">GARAGEM
+  <img vertical-align="top" src="https://cdn-icons-png.flaticon.com/512/2422/2422716.png"  style="max-widht:400px; max-height:400px;">
+  </button>
+</form>
+</td><td>
+<form>
+  <button class="button" onclick="reqserver('http://192.168.0.21/APAGAO')">APAGAO
+  <img src="https://cdn-icons-png.flaticon.com/512/3596/3596172.png"  style="max-widht:400px; max-height:400px;">
+  </button>
+</form>
+</td></tr></tbody></table>
+
+<script type="text/javascript">
+function reqserver(url){
+event.preventDefault();
+fetch(url)
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error(error));
+};
+</script>
+</center></html>
